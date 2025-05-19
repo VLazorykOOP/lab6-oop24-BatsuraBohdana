@@ -2,11 +2,10 @@
 #include <cmath>
 using namespace std;
 
-// Абстрактний клас
 class Figure {
 public:
-    virtual double area() const = 0; // Чиста віртуальна функція
-    virtual ~Figure() {} // Віртуальний деструктор
+    virtual double area() const = 0; 
+    virtual ~Figure() {} 
 };
 
 // Прямокутник
@@ -53,7 +52,6 @@ public:
     }
 };
 
-// Основна функція
 int main() {
     const int SIZE = 4;
     Figure* figures[SIZE];
@@ -67,7 +65,6 @@ int main() {
         cout << "Площа фігури " << i + 1 << " = " << figures[i]->area() << endl;
     }
 
-    // Звільнення пам'яті
     for (int i = 0; i < SIZE; ++i) {
         delete figures[i];
     }
