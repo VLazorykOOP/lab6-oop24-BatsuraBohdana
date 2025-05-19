@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// ======= Ієрархія БЕЗ virtual =======
 class A {
 public:
     int a;
@@ -32,7 +31,7 @@ public:
     int f;
 };
 
-// ======= Ієрархія З virtual =======
+
 class AV {
 public:
     int a;
