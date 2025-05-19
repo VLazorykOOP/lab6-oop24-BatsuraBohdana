@@ -3,7 +3,6 @@
 
 using namespace std;
 
-// Базовий клас "Студент"
 class Student {
 protected:
     string name;
@@ -19,7 +18,7 @@ public:
     friend ostream& operator<<(ostream& out, const Student& s);
 };
 
-// Дружні функції STUDENT поза класом
+
 istream& operator>>(istream& in, Student& s) {
     cout << "Ім'я студента: ";
     getline(in >> ws, s.name);
@@ -37,7 +36,7 @@ ostream& operator<<(ostream& out, const Student& s) {
     return out;
 }
 
-// Базовий клас "Батько"
+
 class Parent {
 protected:
     string childName;
@@ -52,7 +51,7 @@ public:
     friend ostream& operator<<(ostream& out, const Parent& p);
 };
 
-// Дружні функції PARENT поза класом
+
 istream& operator>>(istream& in, Parent& p) {
     cout << "Ім'я дитини: ";
     getline(in >> ws, p.childName);
@@ -67,7 +66,7 @@ ostream& operator<<(ostream& out, const Parent& p) {
     return out;
 }
 
-// Похідний клас "Студент-Батько"
+
 class StudentParent : public Student, public Parent {
 private:
     string status;
